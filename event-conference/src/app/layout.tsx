@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { DemoBanner } from "@/components/demo-banner";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
@@ -23,7 +24,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <DemoBanner />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -23,7 +23,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-background">
       {/* ── Mobile top bar ───────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-background/90 px-4 py-3 backdrop-blur-xl lg:hidden">
+      <header className="sticky top-[var(--demo-banner-top-height)] z-50 flex items-center justify-between border-b border-border bg-background/90 px-4 py-3 backdrop-blur-xl lg:hidden">
         <Link href="/" className="flex items-center gap-2.5">
           <span className="size-2.5 rounded-full bg-primary shadow-[0_0_14px_rgba(255,45,120,0.8)]" />
           <div>
@@ -102,7 +102,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       )}
 
       {/* ── Mobile horizontal nav pills (below header) ───────────── */}
-      <div className="scrollbar-hide sticky top-[57px] z-30 flex gap-2 overflow-x-auto border-b border-border bg-background/90 px-4 py-2.5 backdrop-blur-xl lg:hidden">
+      <div className="scrollbar-hide sticky top-[calc(var(--demo-banner-top-height)+57px)] z-30 flex gap-2 overflow-x-auto border-b border-border bg-background/90 px-4 py-2.5 backdrop-blur-xl lg:hidden">
         {adminNav.map((item) => (
           <Link
             key={item.href}

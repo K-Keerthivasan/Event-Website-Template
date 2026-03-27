@@ -22,7 +22,7 @@ export function SiteShell({
     <div className={cn("relative min-h-screen overflow-hidden", className)}>
       <div className="pointer-events-none absolute inset-0 grid-overlay opacity-20" />
       <header
-        className="sticky top-0 z-40 border-b backdrop-blur-xl"
+        className="sticky top-[var(--demo-banner-top-height)] z-40 border-b backdrop-blur-xl"
         style={{ background: "var(--nav-bg)", borderColor: "var(--nav-border)" }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-10">

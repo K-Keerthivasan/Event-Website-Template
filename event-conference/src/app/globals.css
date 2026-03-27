@@ -50,6 +50,8 @@
 
 /* ─── LIGHT MODE (default) ───────────────────────────────────── */
 :root {
+  --demo-banner-top-height: 3rem;
+  --demo-banner-bottom-height: 2.5rem;
   --font-sans: "Space Grotesk", "Aptos", "Trebuchet MS", sans-serif;
   --font-heading: "Neue Haas Grotesk Text Pro", "Helvetica Neue", "Arial Narrow", sans-serif;
 
@@ -156,6 +158,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    padding-top: var(--demo-banner-top-height);
+    padding-bottom: var(--demo-banner-bottom-height);
     background-image:
       radial-gradient(circle at top left, var(--body-glow-1), transparent 28%),
       radial-gradient(circle at top right, var(--body-glow-2), transparent 24%),
@@ -163,6 +167,13 @@
   }
   a {
     @apply transition-colors;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --demo-banner-top-height: 3.5rem;
+    --demo-banner-bottom-height: 3rem;
   }
 }
 
